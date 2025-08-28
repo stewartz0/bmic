@@ -21,8 +21,9 @@
                 align-items: center;
                 justify-content: center;
                 display: flex;
-                background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-Vq37NXQCix3wUdZfeRysUTRxlesEv9gnrA&s");
+                /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-Vq37NXQCix3wUdZfeRysUTRxlesEv9gnrA&s"); */
                 background-repeat: unset;
+                flex-direction: column;
             }
 
             .nigger {
@@ -40,21 +41,41 @@
             .niggertitle {
                 text-align: center;
             }
+
+            .background-img {
+                position: absolute;
+                z-index: -1;
+                height: 100%;
+                width: 100%;
+                /* object-fit: contain; */
+                /* filter: blur(2px); */
+            }
+
+            #result {
+                color: #ffffff;
+            }
         </style>
+        
+        <script src="src/main.js"></script>
     </head>
 
     <body>
+        
         <div class="container">
+            <img class="background-img" src="img/nigga.jpg"/>
             <div class="content">
                 <div class="nigger">
                     <h3 class="niggertitle">Calculadora BMI</h3>
                     <div class="usercontrol">
-                        <input class="userinput" id="weight" placeholder="Peso (en kilogramos)"/>
-                        <input class="userinput" id="height" placeholder="Altura (en metros)"/>
+                        <input class="userinput" id="weight" type="number" placeholder="Peso (en kilogramos)"/>
+                        <input class="userinput" id="height" type="number" placeholder="Altura (en metros)"/>
                         <button class="actionbtn" id="calculateBtn">Calcular</button>
                     </div>
                 </div>
+                
             </div>
+
+            <h1 id="result">Tu BMI es N/A</h1>
         </div>
     </body>
 </html>
